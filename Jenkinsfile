@@ -14,6 +14,7 @@ pipeline {
     stage('test') {
       steps {
         sh 'npm test'
+        emailext(subject: 'onibi', body: 'hbhbbjbhb', attachLog: true, to: 'Jacg')
       }
     }
   }
